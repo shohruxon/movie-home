@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "e7290944-847c-462b-9b35-87fa2b8d564a",
+		"name": "movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Animation\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Avatar",
+							"type": "default"
+						},
+						{
+							"key": "type",
+							"value": "Fantastic",
+							"type": "default"
+						},
+						{
+							"key": "author",
+							"value": "James C",
+							"type": "default"
+						},
+						{
+							"key": "year",
+							"value": "2009",
+							"type": "default"
+						},
+						{
+							"key": "imdb",
+							"value": "10",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
